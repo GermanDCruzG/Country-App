@@ -16,7 +16,7 @@ form.addEventListener("submit", function (event) {
 
 function buscarPais(nombre) {
     result.innerHTML = "<p>Cargando...</p>";
-    fetch(`https://restcountries.com/v3.1/name/${nombre}`)
+    fetch(`https://restcountries.com/v3.1/name/${nombre}?fullText=true`)
         .then(response => {
             if (!response.ok) {
                 throw new Error("País no encontrado.")
